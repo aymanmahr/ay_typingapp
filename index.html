@@ -1,1 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MyTypingApp</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<main class="app">
+<header>
+<h1 id="logo">MyTypingApp</h1>
+<div class="controls">
+<label for="mode">Mode</label>
+<select id="mode">
+<option value="words">Words</option>
+<option value="sentences">Sentences</option>
+</select>
 
+
+<label for="time">Time</label>
+<select id="time">
+<option value="15">15s</option>
+<option value="30" selected>30s</option>
+<option value="60">60s</option>
+</select>
+
+
+<button id="startBtn">Start</button>
+</div>
+</header>
+
+
+<section class="main-area">
+<div class="left">
+<div id="textArea" class="text-area"></div>
+<input id="input" class="typing-input" placeholder="Start typing when ready..." autocomplete="off" />
+</div>
+
+
+<aside class="right">
+<div class="stats">
+<div>WPM: <span id="wpm">0</span></div>
+<div>Accuracy: <span id="acc">100%</span></div>
+<div>Typed: <span id="chars">0</span></div>
+<div>Time left: <span id="timeLeft">30</span>s</div>
+</div>
+
+
+<div class="customize">
+<h3>Customize</h3>
+<label for="fontSize">Font size</label>
+<input id="fontSize" type="range" min="14" max="40" value="20" />
+
+
+<label>
+<input type="checkbox" id="soundToggle" /> Key sound
+</label>
+
+
+<button id="saveStats">Save session</button>
+<button id="resetStats">Reset stats</button>
+</div>
+
+
+<div class="profile">
+<h3>Profile</h3>
+<input id="username" placeholder="Enter name" />
+<div id="history"></div>
+</div>
+</aside>
+</section>
+
+
+<footer>
+<small>Built with ❤️ — Customize it and push to GitHub.</small>
+</footer>
+</main>
+
+
+<script src="script.js"></script>
+</body>
+</html>
