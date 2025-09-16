@@ -46,18 +46,18 @@ return out;
 }
 
 
-function renderWords(){
+function renderWords(){ 
 textArea.innerHTML='';
 currentWords.forEach((w, i)=>{
 const span = document.createElement('span');
 span.className='word';
 span.textContent = w + (i<currentWords.length-1? ' ':'');
 textArea.appendChild(span);
-});
+}); 
 }
 
 
-function startTest(){
+function startTest(){ 
 resetState();
 totalTime = parseInt(timeSelect.value,10);
 timeLeft = totalTime;
